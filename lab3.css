@@ -1,0 +1,60 @@
+@charset "utf-8"; /* Specifies character encoding as UTF-8 */
+@import url('https://fonts.googleapis.com/css2?family=Arial:wght@300;400;600&display=swap'); 
+
+html {
+    box-sizing: border-box;    /* Includes padding and border in element's total width and height */
+    font-family: "Arial", sans-serif;  /* Sets the font to Arial */
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+#container {
+    width: 80%;  /* Container takes up 80% of the parent element's width */
+    margin: 0 auto;  /* Centers the container horizontally */
+}
+
+.tabs {
+    margin-top: 20px;         /* Adds 20px of space above the tabs */
+}
+
+ul[role="tablist"] {
+    list-style: none;  /* Removes the default list style */
+    padding: 0;  /* Removes default padding */
+    display: flex;  /* Aligns list items in a row */
+    border-bottom: 2px solid #ccc;     /* Adds a 2px solid grey border at the bottom of the tab list */
+}
+
+ul[role="tablist"] li {
+    margin: 0;      /* Removes margin around each list item */
+}
+
+ul[role="tablist"] li a {
+    display: block;  /* Makes each tab a block-level element */
+    padding: 10px 20px; /* Adds padding of 10px vertically and 20px horizontally */
+    text-decoration: none;  /* Removes default underline from links */
+    color: #333; /* Sets the text color to dark grey */
+    font-weight: 600;  /* Sets the font weight to semi-bold */
+    border: 1px solid transparent;  /* Sets a transparent border to avoid layout shifts */
+    border-radius: 5px 5px 0 0;  /* Rounds the top corners of the tabs */
+}
+
+ul[role="tablist"] li a:hover,
+ul[role="tablist"] li a.active {
+    background: #000000;  /* Sets a black background when tab is hovered or active */
+    color: #fff;          /* Sets text color to white for contrast */
+    border: 1px solid #000000; /* Adds a black border around the active or hovered tab */
+}
+
+[role="tabpanel"] {
+    display: none;  /* Hides the tab panel by default */
+    padding: 15px;  /* Adds 15px of padding inside the panel */
+    border: 1px solid #ccc;  /* Adds a light grey border around the panel */
+    border-top: none;  /* Removes the top border to join with the tabs */
+    background: #f9f9f9;  /* Sets a light grey background for the panel */
+}
+
+[role="tabpanel"].active {
+    display: block; /* Displays the active tab panel */
+}
+/*resources taken from youtube and google*/
